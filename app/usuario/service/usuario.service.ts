@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Usuario } from '../class/usuario';
 
 
-//adicine essas duas linhas
+//adicione essas duas linhas
 import { Http, Response } from '@angular/http';
 import { Observable }     from 'rxjs/Observable';
 
@@ -21,7 +21,7 @@ export class UsuarioService {
 
     getListUsuario(): Observable<Usuario[]> {
         // retire esse return
-        //return Promise.resolve(USUARIOS);
+        /*return Promise.resolve(USUARIOS);*/
 
         //adicione esse trecho de código
         return this.http.get(this.usuarioUrl)
@@ -31,7 +31,6 @@ export class UsuarioService {
 
     //Crie esse método
     private handleError(error: Response | any) {
-        // In a real world app, we might use a remote logging infrastructure
         let errMsg: string;
         if (error instanceof Response) {
             const body = error.json() || '';
